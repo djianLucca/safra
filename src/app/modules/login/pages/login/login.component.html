@@ -1,0 +1,26 @@
+<div class="row center-xs middle-xs full-height">
+  <div class="col-xs-10 col-sm-4 col-md-3">
+    <mat-card>
+      <mat-card-content>
+        <h1 class="center">SAFRA</h1>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Usuário">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Senha">
+          </mat-form-field>
+          <div class="row end-xs">
+            <button *ngIf="!isLoading" mat-raised-button color="primary" (click)="login()">Login</button>
+            <div *ngIf="isLoading" class="col-xs-12">
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

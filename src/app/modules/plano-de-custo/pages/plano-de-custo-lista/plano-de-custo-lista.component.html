@@ -1,0 +1,61 @@
+<div class="row center-xs">
+  <div class="col-xs-10 ">
+    <mat-card>
+      <mat-card-title>
+        Planos de Custo de Produção
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-card-content>
+        <mat-table #table [dataSource]="dataSource">
+      
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+      
+          <!-- Safra Column -->
+          <ng-container matColumnDef="safra">
+            <mat-header-cell *matHeaderCellDef> Safra </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> {{plano.safra}} </mat-cell>
+          </ng-container>
+
+          <!-- Produto Column -->
+          <ng-container matColumnDef="produto">
+            <mat-header-cell *matHeaderCellDef> Produto </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> {{plano.produto}} </mat-cell>
+          </ng-container>
+      
+          <!-- Sistema Cultivo Column -->
+          <ng-container matColumnDef="sistemaCultivo">
+            <mat-header-cell *matHeaderCellDef> Sistema Cultivo </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> {{plano.sistemaCultivo}} </mat-cell>
+          </ng-container>
+      
+          <!-- Rendimento Médio Column -->
+          <ng-container matColumnDef="rendimentoMedio">
+            <mat-header-cell *matHeaderCellDef> Rendimento Médio </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> {{plano.rendimentoMedio}} </mat-cell>
+          </ng-container>
+
+          <!-- Receita Bruta Column -->
+          <ng-container matColumnDef="receitaBruta">
+            <mat-header-cell *matHeaderCellDef> Receita Bruta </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> {{plano.receitaBruta}} </mat-cell>
+          </ng-container>
+
+          <!-- Id Column -->
+          <ng-container matColumnDef="acoes">
+            <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+            <mat-cell *matCellDef="let plano"> 
+              <button mat-icon-button routerLink="tabela">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

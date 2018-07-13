@@ -1,0 +1,45 @@
+<div class="row center-xs">
+  <div class="col-xs-10 ">
+    <mat-card>
+      <mat-card-title>
+        Planos de Custo de Produção
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-card-content>
+        <div class="row center-xs between-xs">
+          <div class="col-xs">cultura</div>
+          <div class="col-xs">sistema de cultivo</div>
+          <div class="col-xs">ciclo</div>
+          <div class="col-xs">área</div>
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="min-width:  200px;">Componentes</th>
+              <th>Especificação</th>
+              <th>Un. de Medida</th>
+              <th>Quantidade</th>
+              <th>Valor Unitário</th>
+              <th>Valor Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of plano; let i = index" [ngClass]="'headerItem' + item.nivel">
+              <td [ngClass]="'nivel' + item.nivel"><mat-checkbox>{{ item?.componente }}</mat-checkbox></td>
+              <td>{{ item?.especificacao }}</td>
+              <td>{{ item?.unidadeMedida }}</td>
+              <td>{{ item?.quantidade }}</td>
+              <td>{{ item?.valorUnitario }}</td>
+              <td>{{ item?.valorTotal }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@import '~sass/variables';
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.item-menu {
+    margin-right: 20px;
+}
+
+mat-toolbar{
+    margin-bottom: 10px;
+    background-color: $primary-color;
+    color: #fefefe;
+}
