@@ -30,7 +30,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of plano; let i = index" [ngClass]="'headerItem' + item.nivel">
-              <td [ngClass]="'nivel' + item.nivel"><mat-checkbox>{{ item?.componente }}</mat-checkbox></td>
+              <td [ngClass]="'nivel' + item.nivel">
+                <div class="arrow-right icon" *ngIf="item.nivel != 1"></div>
+                <mat-checkbox>{{ item?.componente }}</mat-checkbox>
+              </td>
               <td>{{ item?.especificacao }}</td>
               <td>{{ item?.unidadeMedida }}</td>
               <td>{{ item?.quantidade }}</td>

@@ -28,3 +28,28 @@ td {
 .nivel3{
     padding-left: 110px;
 }
+.arrow-right.icon {
+    border-color: rgba(0,0,0,0.12);
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 5px;
+    width: 20px;
+    height: 8px;
+    background-color: #fff;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+    border-left: solid 1px rgba(0,0,0,0.4);
+    border-radius: 1px; 
+}
+
+.arrow-right.icon:before {
+    content: '';
+    position: absolute;
+    right: 1px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px rgba(0,0,0,0.4);
+    border-right: solid 1px rgba(0,0,0,0.4);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
